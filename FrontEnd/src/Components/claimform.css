@@ -1,0 +1,26 @@
+.claim-input {
+    resize: none;
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+    background-color: rgb(19, 19, 19);
+}
+.submit {
+    margin-top: 10;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    right: 0px;
+    bottom: 10px;
+    border: none;
+}
+.submit-img {
+    height: inherit;
+    width: inherit;
+    background-color: inherit;
+    position: relative;
+    right: 50%;
+}
+.submit-img:hover {
+    background-color: rgb(53, 53, 53);
+}

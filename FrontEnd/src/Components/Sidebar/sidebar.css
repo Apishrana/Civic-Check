@@ -1,0 +1,47 @@
+* {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+
+.sidebar {
+    background-color: black;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease;
+}
+
+.sidebar.closed {
+    transform: translateX(-100%);
+}
+
+.sidebar.closed .logo {
+    display: none;
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.nav-links {
+    margin-top: 150px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    position: fixed;
+    top: 10px;
+    left: 20px;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    z-index: 1000;
+}

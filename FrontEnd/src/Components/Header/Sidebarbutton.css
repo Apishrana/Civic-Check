@@ -1,0 +1,22 @@
+* {
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    list-style: none;
+}
+.toggle-btn {
+    position: relative;
+    top: -5px;
+    left: 0;
+    font-size: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 2000;
+    color: rgba(255, 255, 255, 0.5);
+    transition: color 0.4s ease;
+}
+.toggle-btn:hover {
+    color: white;
+    transition: color 0.5s ease;
+}
