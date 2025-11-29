@@ -3,7 +3,6 @@ node_modules
 test
 # Python
 _pycache_/
-*.py[cod]
 *.pyo
 *.pyd
 *.so
