@@ -1,4 +1,84 @@
 .DS_Store
 node_modules
-Backend
 test
+# Python
+_pycache_/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+*.dist-info/
+
+# Virtual environments
+.env
+.venv
+venv/
+ENV/
+env/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+*.pyo
+*.pyd
+
+
+# Cache system
+cache/
+*.cache
+
+# Logs
+logs/
+*.log
+
+# Training datasets
+train_images/
+train_full.csv
+data/
+datasets/
+*.csv
+*.tsv
+
+# Model weights / outputs
+model/
+models/
+image_model/
+nlp_model/
+*.pt
+*.pth
+*.bin
+*.h5
+*.pkl
+*.joblib
+
+# Temporary pipeline outputs
+temp/
+tmp/
+outputs/
+checkpoints/
+
+# Fallback search storage
+search_cache/
+search_results/
+scraped_data/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Editor / IDE
+.vscode/
+.idea/
+*.iml
+
+# Node (if frontend exists in repo)
+node_modules/
+dist/
+build/
+
+# Environment / Secrets
+*.env
+.env.*
+.secret
+secrets/
+apikey.txt
