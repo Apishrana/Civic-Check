@@ -1,0 +1,117 @@
+.news-section {
+    margin-top: 56px;
+    margin-bottom: 80px;
+    max-width: 900px;
+    /* center under hero */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.news-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: #f5f5f5;
+    margin-bottom: 18px;
+    letter-spacing: 0.02em;
+}
+
+/* List of cards */
+.news-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Card container */
+.news-card {
+    position: relative;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #070707;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.75);
+    transition: transform 0.18s ease-out, box-shadow 0.18s ease-out,
+        border-color 0.18s ease-out;
+}
+
+/* Subtle gradient accent bar at top of card */
+.news-card-accent {
+    position: absolute;
+    inset: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4fa3ff, #8b5bff, #ff7ac2);
+    opacity: 0.9;
+}
+
+/* Real card content */
+.news-card-content {
+    padding: 16px 20px 14px;
+    background: radial-gradient(circle at top left, #171717 0%, #050505 65%);
+}
+
+/* Hover effect */
+.news-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.85);
+    border-color: rgba(123, 179, 255, 0.55);
+}
+
+/* Header row: chip + title */
+.news-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin-bottom: 6px;
+}
+
+/* Small pill with domain name */
+.news-chip {
+    align-self: flex-start;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    padding: 3px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    color: #c7d6ff;
+}
+
+/* Title */
+.news-headline {
+    font-size: 15px;
+    font-weight: 600;
+    color: #ffffff;
+    margin: 0;
+    background: transparent !important;
+}
+
+/* Description */
+.news-description {
+    margin-top: 4px;
+    font-size: 13px;
+    line-height: 1.6;
+    color: #c0c0c0;
+    background: transparent !important; /* ensure no weird inner bg */
+}
+
+/* Link */
+.news-link {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #74b5ff;
+    text-decoration: none;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+}
+
+/* Mobile tweaks */
+@media (max-width: 768px) {
+    .news-section {
+        padding: 0 16px;
+    }
+}

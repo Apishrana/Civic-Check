@@ -6,7 +6,9 @@ import Forgot from './Components/Auth/Forgot';
 import Header from './Components/Header/Header';
 import Sidebar from './Components/Sidebar/sidebar';
 import api from './api/api';
+import NewsFeed from './Components/NewsFeed';
 import Home from './home';
+import About from './Components/About/About';
 import './App.css';
 
 function App() {
@@ -30,39 +32,61 @@ function App() {
         }
     };
 
-    return (
+    // Layout wrapper for all pages
+    const PageLayout = ({ children }) => (
         <>
-            <Routes>
-                {/* 👇 HOME PAGE */}
-                <Route
-                    path="/"
-                    element={
-                        <>
-                            <Header
-                                open={sidebarOpen}
-                                setOpen={setSidebarOpen}
-                                loggedIn={loggedIn}
-                                setloggedin={setloggedin}
-                            />
-                            <Sidebar
-                                open={sidebarOpen}
-                                setOpen={setSidebarOpen}
-                            />
-                            <Home
-                                handleCheckClaim={handleCheckClaim}
-                                loading={loading}
-                                errorMsg={errorMsg}
-                                result={result}
-                            />
-                        </>
-                    }
-                />
+            <Header
+                open={sidebarOpen}
+                setOpen={setSidebarOpen}
+                loggedIn={loggedIn}
+                setloggedin={setloggedin}
+            />
+            <Sidebar open={sidebarOpen} setOpen={setSidebarOpen} />
 
-                <Route path="/signin" element={<Login />} />
-                <Route path="/signup" element={<Signup />} />
-                <Route path="/forgot" element={<Forgot />} />
-            </Routes>
+            <div
+                style={{
+                    marginLeft: sidebarOpen ? '250px' : '70px',
+                    padding: '20px',
+                    paddingTop: '80px',
+                    transition: 'margin-left 0.3s ease',
+                }}>
+                {children}
+            </div>
         </>
+    );
+
+    return (
+        <Routes>
+            {/* HOME */}
+            <Route
+                path="/"
+                element={
+                    <PageLayout>
+                        <Home
+                            handleCheckClaim={handleCheckClaim}
+                            loading={loading}
+                            errorMsg={errorMsg}
+                            result={result}
+                        />
+                        <NewsFeed />
+                    </PageLayout>
+                }
+            />
+
+            {/* ABOUT */}
+            <Route
+                path="/about"
+                element={
+                    <PageLayout>
+                        <About />
+                    </PageLayout>
+                }
+            />
+
+            <Route path="/signin" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/forgot" element={<Forgot />} />
+        </Routes>
     );
 }
 
